@@ -1,0 +1,24 @@
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    const N = new Array(A.length);
+    let sumValue = 0;
+    let sumArray = 0;
+    for(let i=0; i < A.length; i++){
+        if(!N[A[i]]){
+            N[A[i]] = A[i];
+        }else{
+            return 0
+        }
+        sumValue+=A[i];
+        sumArray+=i+1;
+    } 
+    //console.log(sumValue+' '+sumArray);
+    if(sumArray===sumValue){
+        return 1;
+    }else{
+        return 0;
+    } 
+}
